@@ -22,6 +22,7 @@
         <td>NCM</td>
         <td>CEST</td>
         <td>Unidade de Medida</td>
+        <td>Editar/Deletar</td>
     </tr>
     <tr>
         @foreach ($produto as $produto)
@@ -39,6 +40,12 @@
             <td>{{ $produto->ncm}}</td>
             <td>{{ $produto->cest}}</td>
             <td>{{ $produto->unidade_medida}}</td>
+            <td>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-success" type="button">Editar</button>
+                    <button class="btn btn-outline-danger" type="button">Deletar</button>
+                </div>
+            </td>
         </tr>
         @endforeach
     </tr>

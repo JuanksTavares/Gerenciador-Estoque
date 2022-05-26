@@ -12,14 +12,32 @@
 <body>
     <div class="container">
         <header>
-            <nav>
-                <ul class='nav-list'>
-                    <li><a href="/buscar">Buscar</a></li>
-                    <li><a href="/">Caixa</a></li>
-                    <li><a href="/">Estoque</a></li>
-                    <li><a href="/buscar/adicionar">Cadastro</a></li>
-                    <li><a href="/">Vendas</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Nome do usuario</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/buscar">Buscar</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">Caixa</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="/buscar/adicionar">Cadastrar</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Estoque</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Vendas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
         <div class="jumbotron">

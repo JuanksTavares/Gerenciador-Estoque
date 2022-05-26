@@ -5,13 +5,16 @@ Adicionar Produtos
 @endsection
   
 @section('conteudo')
-<form method = "post">
+<form method = "post" class="row g-3 needs-validation" novalidate>
     
     @csrf
 
     <div class="form-group">
         <label for="nome">Nome Produto</label>
         <input type="text" class="form-control" name="nome" id="nome">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
 
         <label for="Cod_barra">Codigo de Barra</label>
         <input type="text" class="form-control" name="Cod_barra" id="Cod_barra">
@@ -52,6 +55,6 @@ Adicionar Produtos
         <label for="Unidade">Unidade de Medido</label>
         <input type="text" class="form-control" name="Unidade" id="Unidade">
     </div>
-    <button class="btn btn-primary">adicionar</button>
+    <button class="btn btn-outline-success">Salvar</button>
 </form>
 @endsection
