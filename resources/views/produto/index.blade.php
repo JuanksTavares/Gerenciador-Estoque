@@ -43,7 +43,11 @@
             <td>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <button class="btn btn-outline-success" type="button">Editar</button>
-                    <button class="btn btn-outline-danger" type="button">Deletar</button>
+                    <form action="/buscar/{{$produto->id}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                    <button class="btn btn-outline-danger" type="submit">Deletar</button>
+                    </form>
                 </div>
             </td>
         </tr>

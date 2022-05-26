@@ -11,7 +11,7 @@ Adicionar Produtos
 
     <div class="form-group">
         <label for="nome">Nome Produto</label>
-        <input type="text" class="form-control" name="nome" id="nome">
+        <input type="text" class="form-control" name="nome" id="nome"required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -21,14 +21,14 @@ Adicionar Produtos
 
         <label for="Valor_venda">Valor de Venda</label>
         <div class="input-group mb-3">
-            <span class="input-group-text">R$</span>
-            <input type="text" class="form-control" name="Valor_venda" id="Valor_venda">
+          <span class="input-group-text">R$</span>
+          <input type="text" class="form-control" name="Valor_venda" id="Valor_venda">
         </div>
 
         <label for="Custo_medio">Custo Medio</label>
         <div class="input-group mb-3">
-            <span class="input-group-text">R$</span>
-            <input type="text" class="form-control" name="Custo_medio" id="Custo_medio">
+          <span class="input-group-text">R$</span>
+          <input type="text" class="form-control" name="Custo_medio" id="Custo_medio">
         </div>
 
         <label for="Categoria">Categoria para classificação do produto</label>
@@ -57,4 +57,5 @@ Adicionar Produtos
     </div>
     <button class="btn btn-outline-success">Salvar</button>
 </form>
+
 @endsection

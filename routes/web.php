@@ -16,3 +16,4 @@ use App\Http\Controllers\Controleproduto;
 Route::get('/buscar', [Controleproduto::class, 'index']);
 Route::get('/buscar/adicionar', [Controleproduto::class, 'adicionar']);
 Route::post('/buscar/adicionar', [Controleproduto::class, 'store']);
+Route::delete('/buscar/{id}', [Controleproduto::class, 'destroy']);

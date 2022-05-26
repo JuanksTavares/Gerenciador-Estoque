@@ -38,12 +38,21 @@ class Controleproduto extends Controller
             'cest' => $request->CEST,
             'unidade_medida' => $request->Unidade,
             'categoria' => $request->Categoria
-    ]);
-
-    echo "Produto com id{$produto->id} foi criado: {$produto->nome}";
-        #$produto = new Produto();
-        #$produto ->nome = $nome;
-        #var_dump($produto->save());
-    }
+        ]);
     
+    return redirect('/buscar/adicionar')->with('msg','Produto cadastrado com sucesso');
+
+    }
+
+    public function update(Request $request, $id)
+    {
+        $produto = Controleproduto::find($id);
+    }
+
+    public function destroy($id)
+    {
+        Produto::findOrfail($id)->delete();
+
+        return redirect('/buscar')->with('msg','Produto excluido com sucesso');
+    }
 }
