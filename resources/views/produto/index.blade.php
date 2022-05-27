@@ -42,7 +42,7 @@
             <td>{{ $produto->unidade_medida}}</td>
             <td>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-outline-success" type="button">Editar</button>
+                    <a href="/buscar/edit/{{$produto->id}}"class="btn btn-outline-success" type="button">Editar</a>
                     <form action="/buscar/{{$produto->id}}" method="POST">
                         @csrf
                         @method('DELETE')

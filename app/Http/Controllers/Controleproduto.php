@@ -40,19 +40,40 @@ class Controleproduto extends Controller
             'categoria' => $request->Categoria
         ]);
     
-    return redirect('/buscar/adicionar')->with('msg','Produto cadastrado com sucesso');
+    return redirect('/buscar/adicionar');
 
+    }
+    public function edit($id)
+    {
+        $produto = Produto::findOrfail($id);
+
+        return view ('produto.edit',['produto'=> $produto]);
     }
 
     public function update(Request $request, $id)
     {
-        $produto = Controleproduto::find($id);
+        $produto = Produto::findOrfail($id);
+        $produto->nome = $request['nome'];
+        $produto->cod_barra = $request['Cod_barra'];
+        $produto->valor_venda = $request['Valor_venda'];
+        $produto->custo_medio = $request['Custo_medio'];
+        $produto->estoque_disponivel = $request['Estoque'];
+        $produto->estoque_max = $request['Estoque_max'];
+        $produto->estoque_min = $request['Estoque_min'];
+        $produto->origem_produto = $request['Origem'];
+        $produto->ncm = $request['NCM'];
+        $produto->cest = $request['CEST'];
+        $produto->unidade_medida = $request['Unidade'];
+        $produto->categoria = $request['Categoria'];
+        $produto->update();
+
+        return redirect('/buscar');
     }
 
     public function destroy($id)
     {
         Produto::findOrfail($id)->delete();
 
-        return redirect('/buscar')->with('msg','Produto excluido com sucesso');
+        return redirect('/buscar');
     }
 }
